@@ -32,7 +32,16 @@ const Layout: FC<ILayout> = ({ children }) => {
     requestAnimationFrame(raf)
   }, [])
 
-  return <div className='w-full px-4 mx-auto'>{children}</div>
+  return (
+    <div className='relative w-full px-4 mx-auto'>
+      <div className='layout-bg' />
+      <div className='layout'>{children}</div>
+      <footer className='fixed z-[-2] inset-0 flex flex-col items-center justify-end bg-gray-200 text-black'>
+        <div className=''>Copyright © NEOS-AI / EMUQ tech - 2020. All Rights Reserved</div>
+        <div className=''>About | FAQ | Login | Sign up</div>
+      </footer>
+    </div>
+  )
 }
 
 export default Layout
