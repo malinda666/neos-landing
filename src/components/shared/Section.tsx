@@ -6,12 +6,7 @@ interface ISection {
 }
 
 const Section: FC<ISection> = ({ children, cls }) => {
-  return (
-    <div
-      className={['relative w-full flex items-center justify-center min-h-screen', cls].join(' ')}>
-      {children}
-    </div>
-  )
+  return <section className={['section', cls].join(' ')}>{children}</section>
 }
 
 export default Section

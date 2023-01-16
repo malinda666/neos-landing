@@ -1,0 +1,12 @@
+.section {
+  @apply relative w-full flex items-center justify-center min-h-screen text-white;
+
+  &.light {
+    @apply bg-white text-black;
+  }
+
+  &__title {
+    font-family: 'Arupala-light';
+    @apply text-center text-5xl uppercase mb-2;
+  }
+}

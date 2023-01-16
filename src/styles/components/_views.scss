@@ -40,3 +40,16 @@
     }
   }
 }
+
+.whatis {
+  &__wrapper {
+    @apply max-w-4xl flex flex-col items-center justify-center;
+  }
+  &__inner {
+    @apply max-w-4xl flex flex-col items-center justify-center;
+
+    &--content {
+      @apply p-4 text-start;
+    }
+  }
+}

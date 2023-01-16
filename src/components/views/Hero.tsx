@@ -7,21 +7,21 @@ import Title from 'components/shared/Title'
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
-    const video = gsap.utils.selector('.hero__video')('video')
-    gsap.to([video], {
-      y: -50,
+  // useEffect(() => {
+  //   const video = gsap.utils.selector('.hero__video')('video')
+  //   gsap.to([video], {
+  //     y: -50,
 
-      ease: 'ease.out',
-      scrollTrigger: {
-        trigger: video,
-        start: 'center center',
-        end: '+=500px',
-        toggleActions: 'play none none reverse',
-        scrub: 1
-      }
-    })
-  }, [])
+  //     ease: 'ease.out',
+  //     scrollTrigger: {
+  //       trigger: video,
+  //       start: 'center center',
+  //       end: '+=500px',
+  //       toggleActions: 'play none none reverse',
+  //       scrub: 1
+  //     }
+  //   })
+  // }, [])
 
   return (
     <div className='hero'>
