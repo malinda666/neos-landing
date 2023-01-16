@@ -1,14 +1,18 @@
 import { FC, useEffect, ReactNode } from 'react'
 import Lenis from '@studio-freight/lenis'
 
+import { useUI } from 'ctx/UIContext'
+
 interface ILayout {
   children: ReactNode
 }
 
 const Layout: FC<ILayout> = ({ children }) => {
+  const ui = useUI()
+
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
       direction: 'vertical', // vertical, horizontal
       gestureDirection: 'vertical', // vertical, horizontal, both
@@ -20,9 +24,11 @@ const Layout: FC<ILayout> = ({ children }) => {
     })
 
     //get scroll value
-    // lenis.on('scroll', (values: any) => {
-    //   console.log(values?.scroll)
-    // })
+    lenis.on('scroll', (values: any) => {
+      if (values) {
+        ui.updateScroll(values.scroll)
+      }
+    })
 
     function raf(time: number) {
       lenis.raf(time)
@@ -33,7 +39,7 @@ const Layout: FC<ILayout> = ({ children }) => {
   }, [])
 
   return (
-    <div className='relative w-full px-4 mx-auto'>
+    <div className='relative w-full mx-auto'>
       <div className='layout-bg' />
       <div className='layout'>{children}</div>
       <footer className='fixed z-[-2] inset-0 flex flex-col items-center justify-end bg-gray-200 text-black'>

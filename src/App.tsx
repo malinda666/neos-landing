@@ -1,19 +1,13 @@
 import Layout from 'components/layout'
 import Section from 'components/shared/Section'
 
+import Hero from 'components/views/Hero'
+
 const App = () => {
   return (
     <Layout>
       <Section>
-        <div className=''>
-          <div className='title'>NEOS AI</div>
-          <div className=''>
-            <span>
-              The artificial intelligence tool that combines music and data analysis through tech.
-            </span>
-          </div>
-          <video src='/assets/sbg.mp4' autoPlay playsInline muted loop controls={false}></video>
-        </div>
+        <Hero />
       </Section>
       <Section>
         <div className=''>What is neos ai</div>
