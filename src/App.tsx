@@ -2,6 +2,7 @@ import Layout from 'components/layout'
 import Section from 'components/shared/Section'
 
 import Hero from 'components/views/Hero'
+import Meet from 'components/views/Meet'
 
 const App = () => {
   return (
@@ -31,24 +32,23 @@ const App = () => {
         </div>
       </Section>
       <Section>
-        <div className=''>How does it works</div>
-        <div className=''>
-          <p className=''>
-            After the compilations are created by our system, all albums shall be submitted
-            automatically for digital distribution (streaming/downloads).
-          </p>
-          <img src='/assets/process.png' alt='process' />
-          <p className=''>
-            We proudly have an outreach of over 30+ music marketplaces worldwide including Spotify,
-            Apple Music, Amazon Music, YouTube and much more.
-          </p>
+        <div className='howitworks__wrapper'>
+          <div className='section__title'>How does it works</div>
+          <div className='howitworks__inner'>
+            <p className='howitworks__inner--content'>
+              After the compilations are created by our system, all albums shall be submitted
+              automatically for digital distribution (streaming/downloads).
+            </p>
+            <img src='/assets/process.png' alt='process' />
+            <p className='howitworks__inner--content'>
+              We proudly have an outreach of over 30+ music marketplaces worldwide including
+              Spotify, Apple Music, Amazon Music, YouTube and much more.
+            </p>
+          </div>
         </div>
       </Section>
       <Section>
-        <div className=''>Meet neos ai</div>
-        <div className=''>
-          <video src='/assets/sbg.mp4' autoPlay playsInline muted loop controls={false}></video>
-        </div>
+        <Meet />
       </Section>
       {/* <Section>
         <div className=''>Contact</div>
