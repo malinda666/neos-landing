@@ -14,29 +14,50 @@
   }
 
   &__title {
-    width: 100%;
-    height: 100%;
-    @apply bg-black bg-opacity-60;
     position: relative;
     z-index: 1;
-    padding-bottom: 1rem;
-
-    > p {
-      mix-blend-mode: exclusion;
-      font-size: 1.4rem;
-      font-family: 'Another-Regular';
+    font-size: var(--title-size);
+    font-family: var(--title-font-2);
+    @apply leading-none tracking-tight;
+    &--line {
+      @apply w-full flex items-center justify-start overflow-hidden px-1;
+      height: var(--title-size);
+      .spacer {
+        @apply flex-1 h-[1px] bg-white ml-3 opacity-0 scale-x-0 origin-left;
+      }
+      span:not(.spacer) {
+        @apply whitespace-pre inline-block translate-y-full;
+      }
     }
   }
   &__video {
-    mix-blend-mode: screen;
     position: absolute;
     inset: 0;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      @apply bg-black bg-opacity-80;
+    }
     > video {
+      z-index: -1;
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
+      transform: scale(1.4) rotate(-10deg);
+    }
+  }
+
+  &__scroller {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    @apply flex items-center justify-center text-sm overflow-hidden;
+    span {
+      @apply inline-block translate-y-full;
     }
   }
 }
@@ -44,13 +65,16 @@
 .whatis,
 .howitworks {
   &__wrapper {
-    @apply max-w-4xl flex flex-col items-center justify-center;
+    @apply flex flex-col items-center justify-center;
   }
   &__inner {
-    @apply max-w-4xl flex flex-col items-center justify-center;
+    @apply flex flex-col items-center justify-center;
 
     &--content {
       @apply p-4 text-start;
+      max-width: 600px;
+      margin: 1.5rem auto;
+      font-size: 1.25rem;
     }
   }
 }

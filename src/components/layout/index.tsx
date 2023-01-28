@@ -42,7 +42,7 @@ const Layout: FC<ILayout> = ({ children }) => {
     <div className='relative w-full mx-auto'>
       <div className='layout-bg' />
       <div className='layout'>{children}</div>
-      <footer className='fixed z-[-2] inset-0 flex flex-col items-center justify-end bg-gray-200 text-black'>
+      <footer className='footer'>
         <div className=''>Copyright © NEOS-AI / EMUQ tech - 2020. All Rights Reserved</div>
         <div className=''>About | FAQ | Login | Sign up</div>
       </footer>

@@ -11,7 +11,11 @@
 @tailwind utilities;
 
 :root {
-  --footer-height: 8rem;
+  --footer-height: 20rem;
+  --title-size: clamp(2rem, 10vw, 9rem);
+
+  --title-font: 'ClashDisplay-Semibold';
+  --title-font-2: 'ClashDisplay-Medium';
 }
 
 html {
@@ -32,14 +36,15 @@ body {
   font-size: 1rem;
 }
 .title {
-  font-size: 10vw;
-  @apply leading-none tracking-tighter;
-  &__line--1 {
-    font-family: 'Arupala-Semi';
-  }
-  &__line--2 {
-    font-family: 'Arupala-Air';
-  }
+  font-size: var(--title-size);
+  @apply leading-none tracking-tight;
+  font-family: var(--title-font);
+  // &__line--1 {
+  //   // font-family: 'Konstant';
+  //   // font-style: italic;
+  // }
+  // &__line--2 {
+  // }
 }
 
 .layout {
@@ -57,4 +62,8 @@ body {
   will-change: transform;
   border-radius: 0px 0px 10px 10px;
   @apply bg-black;
+}
+footer {
+  height: calc(var(--footer-height) + 2rem);
+  @apply fixed z-[-2] left-0 bottom-0 right-0 flex flex-col items-center justify-center bg-gray-200 text-black;
 }
