@@ -2,6 +2,7 @@ import Layout from 'components/layout'
 import Section from 'components/shared/Section'
 
 import Hero from 'components/views/Hero'
+import Whatis from 'components/views/Whatis'
 import Meet from 'components/views/Meet'
 
 const App = () => {
@@ -11,25 +12,7 @@ const App = () => {
         <Hero />
       </Section>
       <Section cls='light'>
-        <div className='whatis__wrapper'>
-          <div className='section__title'>What is neos ai?</div>
-          <div className='whatis__inner'>
-            <p className='whatis__inner--content'>
-              NEOS-AI is an artificial intelligence tool developed to scan and analyze information
-              received into a database that assembles all the metadata with its corresponding
-              assets. Which essentially was designed to replace human tasks such as sorting,
-              organizing and structuring music libraries for distribution with maximum accuracy and
-              efficiency.
-            </p>
-            <p className='whatis__inner--content'>
-              Besides data indexing, NEOS-AI is capable of creating curated albums in a split of a
-              second. The tool is extremely customizable and can generate albums based on genre,
-              mood, artist, tempo and much more. Utilizing user behavior analytics to determine
-              which tracks to include on each release, our system assigns the best choice for
-              commercial success in music distribution
-            </p>
-          </div>
-        </div>
+        <Whatis />
       </Section>
       <Section>
         <div className='howitworks__wrapper'>

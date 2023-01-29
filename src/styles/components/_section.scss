@@ -6,7 +6,7 @@
   }
 
   &__title {
-    // font-family: 'Konstant';
+    font-family: var(--title-font);
     font-size: clamp(1rem, 3vw, 2rem);
     @apply text-center uppercase mb-2;
   }

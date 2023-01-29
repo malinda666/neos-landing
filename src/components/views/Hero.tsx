@@ -14,6 +14,7 @@ const Hero = () => {
 
     gsap
       .timeline({ delay: 0.25 })
+
       .to(
         titles,
         {
@@ -28,6 +29,15 @@ const Hero = () => {
         0
       )
       .to(
+        video,
+        {
+          duration: 2.25,
+          opacity: 1,
+          ease: 'power2.out'
+        },
+        '-=1'
+      )
+      .to(
         spacers,
         {
           duration: 1.25,
@@ -39,7 +49,7 @@ const Hero = () => {
             from: 'start'
           }
         },
-        '-=1'
+        '-=1.5'
       )
       .to(
         scroller,
@@ -49,7 +59,7 @@ const Hero = () => {
 
           ease: 'power3.out'
         },
-        '-=1.8'
+        '-=2'
       )
 
     // gsap.to([video], {

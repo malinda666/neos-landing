@@ -41,6 +41,7 @@
       @apply bg-black bg-opacity-80;
     }
     > video {
+      opacity: 0;
       z-index: -1;
       position: absolute;
       width: 100%;
@@ -62,7 +63,21 @@
   }
 }
 
-.whatis,
+.whatis {
+  &__wrapper {
+    @apply relative w-full h-[100rem] flex items-center;
+  }
+  &__inner {
+    @apply grid grid-cols-2 grid-rows-1 justify-items-center;
+    &--left {
+      @apply max-w-[50%] flex flex-col items-start justify-start;
+    }
+  }
+  &__image {
+    @apply relative w-[40vw] h-[40vw] mr-4 overflow-hidden rounded;
+  }
+}
+
 .howitworks {
   &__wrapper {
     @apply flex flex-col items-center justify-center;
