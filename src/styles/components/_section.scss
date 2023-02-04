@@ -8,6 +8,14 @@
   &__title {
     font-family: var(--title-font);
     font-size: clamp(1rem, 3vw, 2rem);
-    @apply text-center uppercase mb-2;
+    @apply text-center uppercase mb-2 leading-none overflow-hidden;
+
+    span {
+      @apply whitespace-pre inline-block translate-y-full;
+    }
+
+    &.start {
+      @apply text-start;
+    }
   }
 }

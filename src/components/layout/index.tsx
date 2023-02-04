@@ -22,19 +22,16 @@ const Layout: FC<ILayout> = ({ children }) => {
       touchMultiplier: 2,
       infinite: false
     })
-
     //get scroll value
     lenis.on('scroll', (values: any) => {
       if (values) {
         ui.updateScroll(values.scroll)
       }
     })
-
     function raf(time: number) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
-
     requestAnimationFrame(raf)
   }, [])
 

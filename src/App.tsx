@@ -11,7 +11,7 @@ const App = () => {
       <Section>
         <Hero />
       </Section>
-      <Section cls='light'>
+      <Section cls='light pt-[10vw]'>
         <Whatis />
       </Section>
       <Section>
